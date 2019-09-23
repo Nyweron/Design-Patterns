@@ -4,6 +4,6 @@ namespace DesignPatterns.notification
 {
   public interface IObserver
   {
-    void update(Order order);
+    void Update(Order order);
   }
 }
