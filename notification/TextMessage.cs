@@ -2,9 +2,9 @@ using DesignPatterns.order;
 
 namespace DesignPatterns.notification
 {
-  public class TextMessage
+  public class TextMessage : IObserver
   {
-    public void UpdateOrderStatus(Order order)
+    public void Update(Order order)
     {
       System.Console.WriteLine($"SMS - order number: {order._orderNumber} changed status to: {order._orderStatus}");
     }
