@@ -13,9 +13,25 @@ namespace DesignPatterns
       var mobileApp = new MobileApp();
       var email = new Email();
 
-      textMessage.UpdateOrderStatus(order);
-      mobileApp.UpdateOrderStatus(order);
-      email.UpdateOrderStatus(order);
+      System.Console.WriteLine();
+
+      order.RegisterObserver(textMessage);
+      order.RegisterObserver(mobileApp);
+      order.RegisterObserver(email);
+
+      order.NotifyObservers();
+
+      System.Console.WriteLine();
+
+      order.ChangedOrderStatus(OrderStatus.Sent);
+
+      order.UnregisterObserver(email);
+
+      System.Console.WriteLine();
+
+      order.ChangedOrderStatus(OrderStatus.Received);
+
+      System.Console.WriteLine();
     }
   }
 }
