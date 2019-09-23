@@ -1,5 +1,4 @@
-﻿using System;
-using DesignPatterns.notification;
+﻿using DesignPatterns.notification;
 using DesignPatterns.order;
 
 namespace DesignPatterns
@@ -20,3 +19,13 @@ namespace DesignPatterns
     }
   }
 }
+
+/*
+PROBLEMS:
+1. If we changed order then we need again init 3 objects textMessage, mobileApp and email
+2. If we add new notification class then we should new class and this cause a lot of duplicated code...
+3. In notification classes we use the same method...
+
+HOW TO FIX:
+1. Use DesignPattern Observer
+ */

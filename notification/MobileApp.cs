@@ -6,7 +6,7 @@ namespace DesignPatterns.notification
   {
     public void UpdateOrderStatus(Order order)
     {
-      System.Console.WriteLine($"Mobile app - order number: {order.GetOrderNumber()} changed status to: {order.GetOrderStatus()}");
+      System.Console.WriteLine($"Mobile app - order number: {order._orderNumber} changed status to: {order._orderStatus}");
     }
   }
 }
