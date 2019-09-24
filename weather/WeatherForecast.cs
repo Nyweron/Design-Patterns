@@ -5,23 +5,40 @@ namespace DesignPatterns.weather
 {
   public class WeatherForecast : IObservable
   {
-    public int temptemper { get; set; }
+
+    public int temperature { get; set; }
     public int pressure { get; set; }
-    public HashSet<IObserver> RegisteredObservers = new HashSet<IObserver>();
+    public HashSet<IObserver> registeredObservers = new HashSet<IObserver>();
+
+    public WeatherForecast(int _temperature, int _pressure)
+    {
+      temperature = _temperature;
+      pressure = _pressure;
+    }
 
     public void RegisterObserver(IObserver observer)
     {
-      throw new System.NotImplementedException();
+      registeredObservers.Add(observer);
     }
 
     public void UnregisterObserver(IObserver observer)
     {
-      throw new System.NotImplementedException();
+      registeredObservers.Remove(observer);
     }
 
     public void NotifyObservers()
     {
-      throw new System.NotImplementedException();
+      foreach (var observer in registeredObservers)
+      {
+        observer.UpdateForecast(this);
+      }
+    }
+
+    public void UpdateForecast(int _temperature, int _pressure)
+    {
+      temperature = _temperature;
+      pressure = _pressure;
+      NotifyObservers();
     }
   }
 }
