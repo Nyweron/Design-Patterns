@@ -5,7 +5,6 @@ namespace DesignPatterns.weather
 {
   public class WeatherForecast : IObservable
   {
-
     public int temperature { get; set; }
     public int pressure { get; set; }
     public HashSet<IObserver> registeredObservers = new HashSet<IObserver>();
