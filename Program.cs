@@ -1,5 +1,4 @@
 ﻿using DesignPatterns.notification;
-using DesignPatterns.order;
 
 namespace DesignPatterns
 {
