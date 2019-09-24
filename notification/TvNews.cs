@@ -1,3 +1,4 @@
+using System;
 using DesignPatterns.weather;
 
 namespace DesignPatterns.notification
@@ -6,7 +7,7 @@ namespace DesignPatterns.notification
   {
     public void UpdateForecast(WeatherForecast weatherForecast)
     {
-      throw new System.NotImplementedException();
+      Console.WriteLine($"TV weather, temperature: {weatherForecast.temperature}, pressure: {weatherForecast.pressure}");
     }
   }
 }
