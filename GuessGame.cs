@@ -5,7 +5,6 @@ namespace DesignPatterns
   public class GuessGame
   {
     private int points = 0;
-    private int randomInt = 0;
     private static readonly GuessGame instance = new GuessGame();
     private Random random = new Random();
     private GuessGame()
@@ -43,6 +42,5 @@ namespace DesignPatterns
     {
       return instance;
     }
-
   }
 }
