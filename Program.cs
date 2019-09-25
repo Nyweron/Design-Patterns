@@ -6,7 +6,22 @@ namespace DesignPatterns
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      GuessGame game = GuessGame.GetInstance();
+
+      game.Play();
+
+      int score = game.GetScore();
+
+      GuessGame anotherGameReference = GuessGame.GetInstance();
+
+      if (game == anotherGameReference)
+      {
+        Console.WriteLine("Singleton!");
+        if (score == anotherGameReference.GetScore())
+        {
+          Console.WriteLine("Points are the same!");
+        }
+      }
     }
   }
 }
