@@ -6,8 +6,7 @@ namespace DesignPatterns
   {
     static void Main(string[] args)
     {
-
-      // var house1 = new HouseProblem("walls", "floors", "rooms", "windows", "doors", "garage");
+      //var house1 = new HouseProblem("walls", "floors", "rooms", "windows", "doors", "garage");
       // var house2 = new HouseProblem();
       // What fields we should use now?
       // it is mess
@@ -22,7 +21,6 @@ namespace DesignPatterns
         .Build();
 
       Console.WriteLine(house.ToString());
-
     }
   }
 }

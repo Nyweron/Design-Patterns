@@ -29,26 +29,18 @@ namespace DesignPatterns
 
     public HouseProblem(string walls, string floor, string rooms, string roof, string windows, string doors, string garage)
     {
-      this.Walls = walls;
-      this.Floor = floor;
-      this.Rooms = rooms;
-      this.Roof = roof;
-      this.Windows = windows;
-      this.Doors = doors;
-      this.Garage = garage;
+      this.walls = walls;
+      this.floor = floor;
+      this.rooms = rooms;
+      this.roof = roof;
+      this.windows = windows;
+      this.doors = doors;
+      this.garage = garage;
     }
-
-    public string Walls { get => walls; set => walls = value; }
-    public string Floor { get => floor; set => floor = value; }
-    public string Rooms { get => rooms; set => rooms = value; }
-    public string Roof { get => roof; set => roof = value; }
-    public string Windows { get => windows; set => windows = value; }
-    public string Doors { get => doors; set => doors = value; }
-    public string Garage { get => garage; set => garage = value; }
 
     public override string ToString()
     {
-      return string.Format("[walls: {0}, {1}, {2}, {3}, {4}, {5}, {6}]", this.walls, this.floor, this.rooms, this.roof, this.windows, this.doors, this.garage);
+      return string.Format("[{0}, {1}, {2}, {3}, {4}, {5}, {6}]", this.walls, this.floor, this.rooms, this.roof, this.windows, this.doors, this.garage);
     }
   }
 }
