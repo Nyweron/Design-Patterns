@@ -1,5 +1,6 @@
 namespace DesignPatterns
 {
+  /* Builder fluent interface  ('static class') */
   class House
   {
     private string walls;
@@ -83,7 +84,5 @@ namespace DesignPatterns
         return new House(this);
       }
     }
-
   }
-
 }
