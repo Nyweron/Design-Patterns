@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DesignPatterns
 {
+  /* fluent interface */
   public class FlightLeg
   {
     private string _from;
@@ -60,7 +61,6 @@ namespace DesignPatterns
 
         return new FlightLeg(this);
       }
-
     }
   }
 }
