@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPatterns.BuilderApproach_2;
 
 namespace DesignPatterns
 {
@@ -14,13 +15,27 @@ namespace DesignPatterns
       // we do not sure which fileds should be init...
 
       // Builder is solving this problem
-      House house = new House.HouseBuilder()
+      // removing many constructors
+      // setters removing
+      HouseOne house = new HouseOne.HouseBuilder()
         .Walls("Walls")
         .Doors("Door")
         .Floor("Floor")
         .Build();
 
-      Console.WriteLine(house.ToString());
+      //Console.WriteLine(house.ToString());
+
+      SmallHouseBuilder smallHouseBuilder = new SmallHouseBuilder();
+      HouseDirector smallHouseDirector = new HouseDirector(smallHouseBuilder);
+      smallHouseDirector.BuildHouse();
+      HouseTwo smallHouse = smallHouseDirector.GetHouse();
+      Console.WriteLine(smallHouse.ToString());
+
+      BigHouseBuilder bigHouseBuilder = new BigHouseBuilder();
+      HouseDirector bigHouseDirector = new HouseDirector(bigHouseBuilder);
+      bigHouseDirector.BuildHouse();
+      HouseTwo bigHouse = bigHouseDirector.GetHouse();
+      Console.WriteLine(bigHouse.ToString());
     }
   }
 }

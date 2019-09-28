@@ -1,7 +1,7 @@
 namespace DesignPatterns
 {
   /* Builder fluent interface  ('static class') */
-  class House
+  class HouseOne
   {
     private string walls;
     private string floor;
@@ -11,7 +11,7 @@ namespace DesignPatterns
     private string doors;
     private string garage;
 
-    public House(HouseBuilder houseBuilder)
+    public HouseOne(HouseBuilder houseBuilder)
     {
       walls = houseBuilder.walls;
       floor = houseBuilder.floor;
@@ -79,9 +79,9 @@ namespace DesignPatterns
         return this;
       }
 
-      public House Build()
+      public HouseOne Build()
       {
-        return new House(this);
+        return new HouseOne(this);
       }
     }
   }
