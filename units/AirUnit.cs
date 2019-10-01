@@ -18,4 +18,3 @@ namespace DesignPatterns.units
     public int DmgDone { get => dmgDone; set => dmgDone = value; }
   }
 }
-}
