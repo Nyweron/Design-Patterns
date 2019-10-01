@@ -1,4 +1,5 @@
 ﻿using System;
+using DesignPatterns.units;
 
 namespace DesignPatterns
 {
@@ -6,9 +7,12 @@ namespace DesignPatterns
   {
     static void Main(string[] args)
     {
+      Factory factory = new UnitFactory();
+
       Console.WriteLine("Hello World!");
-      Unit tank = new Tank(200, 0, 20);
-      Unit infantryman = new Rifleman(200, 0, 20);
+      Unit tank = factory.CreateUnit(UnitType.TANK);
+      Unit infantryman = factory.CreateUnit(UnitType.RIFLEMAN);
+
     }
   }
 }
