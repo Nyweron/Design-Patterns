@@ -1,6 +1,6 @@
 namespace DesignPatterns.units
 {
-  public class Tank : Unit
+  public class Tank : MechanizedUnit
   {
     public Tank(int hp, int exp, int dmgDone) : base(hp, exp, dmgDone) { }
   }

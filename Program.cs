@@ -7,11 +7,14 @@ namespace DesignPatterns
   {
     static void Main(string[] args)
     {
-      Factory factory = new UnitFactory();
+      Factory blueFactory = new BlueFactory();
+      Factory redFactory = new RedFactory();
 
-      Console.WriteLine("Hello World!");
-      Unit tank = factory.CreateUnit(UnitType.TANK);
-      Unit infantryman = factory.CreateUnit(UnitType.RIFLEMAN);
+      MechanizedUnit redTank = redFactory.CreateMechanizedUnit(UnitType.TANK);
+      InfantryUnit redInfantry = redFactory.CreateInfantryUnit(UnitType.RIFLEMAN);
+
+      MechanizedUnit blueTank = redFactory.CreateMechanizedUnit(UnitType.TANK);
+      InfantryUnit blueInfantry = redFactory.CreateInfantryUnit(UnitType.RIFLEMAN);
 
     }
   }

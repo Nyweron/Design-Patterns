@@ -2,6 +2,7 @@ namespace DesignPatterns.units
 {
   public abstract class Factory
   {
-    public abstract Unit CreateUnit(UnitType unitType);
+    public abstract InfantryUnit CreateInfantryUnit(UnitType unitType);
+    public abstract MechanizedUnit CreateMechanizedUnit(UnitType unitType);
   }
 }
