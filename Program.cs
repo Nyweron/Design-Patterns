@@ -16,6 +16,9 @@ namespace DesignPatterns
       MechanizedUnit blueTank = redFactory.CreateMechanizedUnit(UnitType.TANK);
       InfantryUnit blueInfantry = redFactory.CreateInfantryUnit(UnitType.RIFLEMAN);
 
+      AirUnit blueHelicopter = blueFactory.CreateAirUnit(UnitType.HELICOPTER);
+      AirUnit redHelicopter = redFactory.CreateAirUnit(UnitType.HELICOPTER);
+
     }
   }
 }

@@ -4,5 +4,6 @@ namespace DesignPatterns.units
   {
     TANK,
     RIFLEMAN,
+    HELICOPTER,
   }
 }
