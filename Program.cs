@@ -11,9 +11,9 @@ namespace DesignPatterns
 
       for (int i = 0; i < 10000000; i++)
       {
-        tempList.Add(new Tank("Tank", 200, 100, 50, 25, 0, 0, 50));
-        tempList.Add(new Rifleman("Rifleman", 200, 100, 50, 25, 0, 0, 50));
-        tempList.Add(new Destroyer("Destroyer", 200, 100, 50, 25, 0, 0, 50));
+        tempList.Add(new Tank(0, 0));
+        tempList.Add(new Rifleman(0, 0));
+        tempList.Add(new Destroyer(0, 0));
       }
 
       Console.WriteLine("Hello World!");
