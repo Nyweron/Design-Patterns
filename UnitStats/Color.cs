@@ -2,9 +2,9 @@ namespace Design_Patterns.UnitStats
 {
   public class Color
   {
-    private int r { get; }
-    private int g { get; }
-    private int b { get; }
+    private int r;
+    private int g;
+    private int b;
 
     public Color(int r, int g, int b)
     {

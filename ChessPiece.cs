@@ -25,9 +25,6 @@ namespace Design_Patterns
       }
     }
 
-    public string Name { get => name; }
-    public int NumberPosition { get => numberPosition; }
-    public char LetterPosition { get => letterPosition; }
     public Color Color { get => color; }
   }
 }
